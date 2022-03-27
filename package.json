@@ -1,0 +1,11 @@
+{
+  "name": "reskill-hack",
+  "version": "1.0.0",
+  "description": "user profile using mvc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sahil gupta",
+  "license": "ISC"
+}
