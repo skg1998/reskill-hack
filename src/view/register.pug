@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  #app
+    .login-form
+        if success 
+          .alert.alert-success(role='alert')
+            | #{message}
+        else if  message && !success
+          .alert.alert-danger(role='alert')
+            | #{message}   
+        form(method='POST' action='/api/v1/users/register' )
+            h2.text-center Register
+            .form-group
+            input.form-control(type='text' placeholder='Name' name="name" value="" required='required')
+            .form-group
+            input.form-control(type='email' placeholder='Username' name="username" required='required')
+            .form-group
+            input.form-control(type='password' placeholder='Password' name="password" required='required')
+            .form-group
+            input.form-control(type='password' placeholder='Conform Password' name="conform_password" required='required')
+            .form-group
+            select.form-control.mb-3(name="language" required='required')
+              option(selected='') SELECT LANGUAGE
+              option(value='EN') EN
+              option(value='DE') DE
+            input.form-control(type='number' placeholder='Phone Number' name="mobile_no")
+            .form-group
+            button.btn.btn-primary.btn-block(type='submit') Register
+            .clearfix
+        p.text-center
+            a(href='/api/v1/users/login') Login To Account

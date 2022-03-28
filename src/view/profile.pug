@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  #app
+    table.table.table-bordered
+        tbody
+           if user.language === 'EN'
+            tr
+              th(scope='row') Name : #{user.name}
+            tr  
+              th(scope='row') Username : #{user.username}
+            tr  
+              th(scope='row') Language : #{user.language}
+            tr  
+              th(scope='row') Mobile Number : #{user.mobile_no}
+           else 
+            tr
+              td Name : #{user.name}
+            tr  
+              td Nutzername : #{user.username}
+            tr  
+              td Sprache : #{user.language}
+            tr  
+              td Handynummer : #{user.mobile_no}

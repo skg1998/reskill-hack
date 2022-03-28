@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  #app
+    .container
+      .d-flex.align-items-center.justify-content-center(style='height: 350px')
+        table.table.table-bordered
+          tbody 
+            tr
+              th Sr.No
+              th Name
+              th Email
+              th Created Date
+              th Action
+            - console.log("allUser", allUser)  
+            - for (var n = 0; n < allUser.length; n++) {
+              tr
+                td= n+1
+                td= allUser[n].name
+                td= allUser[n].username
+                td= allUser[n].createdAt
+                td 
+                  button.btn.btn-success.mr-3(type='button') Enable 
+                  button.btn.btn-danger(type='button') Disable 
+
+            - }    

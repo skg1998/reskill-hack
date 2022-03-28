@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  #app
+    div(class="")
+      nav(class="navbar navbar-expand-lg navbar-dark bg-dark")
+          .container-fluid
+              a(class="navbar-brand" href="#") Re-Skill DashBoard
+              button(class="navbar-toggler" type="button" 
+                  data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+                  aria-controls="navbarNavAltMarkup" aria-expanded="false" 
+                  aria-label="Toggle navigation")
+              span(class="navbar-toggler-icon")
+              div(class="collapse navbar-collapse" id="navbarNavAltMarkup")
+              div(class="navbar-nav")
+                  a(class="nav-link active" aria-current="page" href="#") Home
+                  a(class="nav-link" href="/api/v1/users/register") Register
+                  a(class="nav-link" href="/api/v1/users/login") Login
+      .border.border-light.p-3.mb-4
+        .d-flex.align-items-center.justify-content-center(style='height: 350px')
+          .p-2.bd-highlight.col-example
+            form(action='/api/v1/users/getUserData' method='post')
+              h2.text-center Get User
+              .form-group
+              input.form-control(type='text' placeholder='Username' name="username" required='required')
+              .form-group
+              button.btn.btn-primary.btn-block(type='submit') Submit
+              .clearfix
+            
+                      
+    

@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  #app
+    .border.border-light.p-3.mb-4
+      .d-flex.align-items-center.justify-content-center(style='height: 350px')
+        .p-2.bd-highlight.col-example
+          | Your account has been verified 
+          a(href='/api/v1/users/login')  click here
