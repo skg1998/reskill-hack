@@ -1,0 +1,13 @@
+{
+  "production": {
+    "DATABASE_URL": "DB_URL"
+  },
+  "development": {
+    "username": "DB_USER",
+    "password": "DB_PASS",
+    "database": "DB_NAME",
+    "host": "DB_HOST",
+    "port": 5432,
+    "dialect": "DB_DIALECT"
+  }
+}
